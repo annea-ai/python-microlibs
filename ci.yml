@@ -1,0 +1,15 @@
+before_script:
+  - pip install tox wheel
+# define an "anchor" to reuse the definition in every OS we test for
+.full_test_def: &full_test
+  type: test
+  script:
+    - tox -r
+build:osx:
+  tags:
+    - osx
+  <<: *full_test
+build:centos7:
+  tags:
+    - centos
+  <<: *full_test
