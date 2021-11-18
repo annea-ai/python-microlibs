@@ -21,3 +21,21 @@ python setup.py develop
 
 # Running tests
 You can run tests using [tox](https://tox.wiki/en/latest/install.html) by simply running `tox` in a directory containing a `tox.ini` file.
+
+# Distribute
+Individual microlibs cannot be distributed by the macrolib `setup.py`, but should be built individually by
+```bash
+python setup.py bdist_wheel 
+```
+These wheels can then be uploaded to a pypi server
+
+## Local pypi server
+You can start a pypi server by running
+```bash
+docker-compose up -d
+```
+in the root directory. This will serve packages built from the microlibs directory, and can thereafter be installed by: 
+```bash
+pip install --extra-index-url http://localhost:8080/simple/ macrolib.foo
+```
+

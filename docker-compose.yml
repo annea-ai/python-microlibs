@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  pypiserver:
+    image: pypiserver/pypiserver:latest
+    container_name: pypiserver
+    restart: always
+    volumes:
+      - ./microlibs:/data/packages
+    ports:
+      - "8080:8080"
