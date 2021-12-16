@@ -8,3 +8,5 @@ services:
       dockerfile: ./Dockerfile
       network: host
     container_name: app-boilerplate
+    volumes:
+      - "./:/app"
