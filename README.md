@@ -39,3 +39,5 @@ in the root directory. This will serve packages built from the microlibs directo
 pip install --extra-index-url http://localhost:8080/simple/ macrolib.foo
 ```
 
+# Applications
+Contains runnable applications. Apps are by default run with docker, see example app in [baz](applications/baz/README.md).
