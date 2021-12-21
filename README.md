@@ -3,6 +3,12 @@ Python Microlibs
 
 An implementation of Python Microlibs inspired by [this](https://medium.com/@jherreras/python-microlibs-5be9461ad979) excellent blogpost.
 
+# Microlibs
+Microlibs is an implementation where multiple packages are grouped under the same namespace. Each microlib is its own python package
+
+# Applications
+Contains runnable applications. Apps are by default run with docker, see example app in [baz](applications/baz/README.md).
+
 # Using the microlibs
 Start by installing them with the provided `setup.py` file
 ```bash
@@ -38,6 +44,3 @@ in the root directory. This will serve packages built from the microlibs directo
 ```bash
 pip install --extra-index-url http://localhost:8080/simple/ macrolib.foo
 ```
-
-# Applications
-Contains runnable applications. Apps are by default run with docker, see example app in [baz](applications/baz/README.md).
