@@ -9,3 +9,12 @@ services:
       - ./microlibs:/data/packages
     ports:
       - "8080:8080"
+  baz:
+    image: baz
+    build:
+      context: applications/baz
+      dockerfile: Dockerfile
+      network: host
+    container_name: baz
+    volumes:
+      - "./applications/baz:/app"

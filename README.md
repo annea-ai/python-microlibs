@@ -9,6 +9,9 @@ Microlibs is an implementation where multiple packages are grouped under the sam
 # Applications
 Contains runnable applications. Apps are by default run with docker, see example app in [baz](applications/baz/README.md).
 
+## Running
+Applications are runnable with `docker-compose up`, if you have Docker and Docker Compose installed.
+
 # Using the microlibs
 Start by installing them with the provided `setup.py` file
 ```bash
